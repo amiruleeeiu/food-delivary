@@ -1,0 +1,16 @@
+.cart_container{
+    margin-top: 20px;
+}
+.cart_image{
+    width: 50px;
+    text-align: center;
+}
+.delete_btn i{
+    cursor: pointer;
+}
+.title{
+    width: 300px;
+}
+.title a{
+    text-decoration: none;
+}

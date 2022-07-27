@@ -1,0 +1,92 @@
+.feature_subtitle{
+    color: orangered;
+}
+.feature_title{
+    font-weight: 700;
+}
+.feature_title span{
+    color: orangered;
+}
+.feature__text{
+    font-size: 12px;
+}
+.feature_content p{
+    font-size: 13px;
+    font-weight: 450;
+    color: gray;
+}
+.foods_category{
+    background: orangered;
+    border-radius: 10px;
+    padding: 20px 0px;
+    margin-top: 20px;
+}
+.foods_category button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+}
+.foods_category button img{
+    height: 20px;
+    width: 20px;
+}
+
+.active_category_btn{
+    background: rgb(8, 20, 56) !important;
+
+}
+.tasty_treat_title span{
+    color: orangered;
+}
+.tasty_treat_title h3{
+    margin-bottom: 20px;
+}
+.why_testy_treat p{
+    font-size: 13px;
+    font-weight: 450;
+}
+.category_btns button{
+    outline: none;
+    border: none;
+    background: orangered;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    margin: 10px 0px;
+}
+.category_btns button img{
+    margin-right: 10px;
+    height: 30px;
+    width: 1px;
+}
+.see_more a{
+    text-decoration: none;
+    float: right;
+    color: white;
+    background: rgb(25, 25, 63);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.see_more a:hover{
+    color: white;
+    background: rgb(68, 68, 121);
+}
+.product_quantity{
+    border: 1px solid orangered;
+}
+.product_quantity button{
+    outline: none;
+    border: none;
+}
+.product_quantity button i{
+    font-size: 20px;
+}
+.product_quantity input{
+    width: 30px;
+    outline: none;
+    border: none;
+    text-align: center;
+}

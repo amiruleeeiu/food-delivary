@@ -1,0 +1,7 @@
+.style_line{
+    height: 3px;
+    background: orangered;
+    /* width: 120px; */
+    margin: auto;
+    border-radius: 5px;
+}

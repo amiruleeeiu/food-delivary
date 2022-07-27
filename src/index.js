@@ -5,6 +5,10 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'remixicon/fonts/remixicon.css'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const container = document.getElementById('root');
 const root = createRoot(container);

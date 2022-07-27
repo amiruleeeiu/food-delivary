@@ -1,0 +1,35 @@
+.image_section img{
+    width: 70%;
+}
+.image_section span img{
+    width: 10%;
+    cursor: pointer;
+}
+.image_btns span{
+    margin-left: 10px;
+}
+.review_form{
+    background: #fde4e5;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.review_form input{
+    margin: 5px 0px;
+}
+.review_form textarea,input{
+    outline: none;
+    border: none;
+    margin: 5px 0px;
+    width: 100%;
+    border-radius: 10px;
+}
+.review_btn{
+    background: rgb(29, 15, 43);
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+}

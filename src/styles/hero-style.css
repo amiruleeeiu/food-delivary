@@ -1,0 +1,51 @@
+.hero_content{
+    padding-top: 70px;
+}
+.hero_title span{
+    color: orangered;
+}
+.hero_content p{
+    font-weight: 500;
+    color: gray;
+}
+.hero_btns button{
+    outline: none;
+    border: none;
+    padding:5px 10px;
+    border-radius: 5px;
+}
+.order_btn{
+    background: orangered;
+    color: white;
+    
+}
+.order_btn:hover{
+    background: rgb(8, 20, 56);
+}
+.all_foods_btn{
+    border: 1px solid orangered !important;
+    background:white;
+}
+.all_foods_btn:hover{
+    background: rgb(8, 20, 56);
+}
+.all_foods_btn a{
+    text-decoration: none;
+    color: black;
+    
+}
+.all_foods_btn a:hover{
+    text-decoration: none;
+    color: white;
+    
+}
+.hero_service p{
+    font-size: 12px;
+    font-weight: 400;
+}
+.shopping_icon i{
+    background: orangered;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}

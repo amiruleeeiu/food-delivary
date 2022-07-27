@@ -1,0 +1,105 @@
+.activeStyle {
+    color: rgb(255, 123, 0);
+}
+
+.logo h4{
+    font-weight: 750;
+    color: rgb(255, 123, 0);
+}
+.nav_wraper{
+    margin-top: 20px;
+}
+
+.manu a{
+    text-decoration: none;
+}
+
+
+.cart_icon i,.user i,.mobile_menu i{
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.cart_icon{
+    position: relative;
+    
+}
+.cart_badge{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.user_icon a{
+    text-decoration: none;
+}
+
+.user img{
+    width: 30%;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.mobile_menu{
+    display: none;
+    font-weight: 600;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+.header_shrink{
+    background: white;
+    box-shadow: 5px 5px 15px -5px rgb(205, 213, 218);
+    height: 70px;
+    z-index: 99999;
+}
+.logo a{
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width:992px){
+    .navigation{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(226, 218, 233);
+        z-index: 99;
+        display: none;
+    }
+    .manu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        line-height: 20px;
+    }
+    .mobile_menu{
+        display: block;
+    }
+
+    .show_menu{
+        display: block;
+    }
+}

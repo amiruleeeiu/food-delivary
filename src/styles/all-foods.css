@@ -1,0 +1,12 @@
+.search_item{
+    border: 1px solid gray;
+    padding:5px 10px;
+    border-radius: 10px;
+}
+.search_item input{
+    border: none;
+}
+.search_item input:focus{
+    outline: none;
+}
+
