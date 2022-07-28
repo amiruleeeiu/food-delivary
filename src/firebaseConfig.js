@@ -1,11 +1,16 @@
 
+import {initializeApp } from 'firebase/app'
+import {getAuth} from 'firebase/auth';
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBQF9hj4lsfhB5yWexjnAlZyh6gZP8bukA",
-  authDomain: "food-delivary-df7c6.firebaseapp.com",
-  projectId: "food-delivary-df7c6",
-  storageBucket: "food-delivary-df7c6.appspot.com",
-  messagingSenderId: "411500475571",
-  appId: "1:411500475571:web:d321e6970cd06ac1c3ecc6"
+  apiKey: "AIzaSyAm4qpI_iHua0qH5UtQNladmr20RN5gTvc",
+  authDomain: "food-delivary-e258a.firebaseapp.com",
+  projectId: "food-delivary-e258a",
+  storageBucket: "food-delivary-e258a.appspot.com",
+  messagingSenderId: "357987146344",
+  appId: "1:357987146344:web:d1e3913d518387934cb9dd"
 };
 
-export default firebaseConfig;
+const app=initializeApp(firebaseConfig);
+export const auth=getAuth(app);
+export default app;

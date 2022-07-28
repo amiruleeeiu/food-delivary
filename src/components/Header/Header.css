@@ -7,7 +7,7 @@
     color: rgb(255, 123, 0);
 }
 .nav_wraper{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .manu a{
@@ -63,13 +63,21 @@
 .header_shrink{
     background: white;
     box-shadow: 5px 5px 15px -5px rgb(205, 213, 218);
-    height: 70px;
+    height: 60px;
     z-index: 99999;
 }
 .logo a{
     text-decoration: none;
 }
-
+.log_out_btn{
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    background: rgb(32, 32, 70);
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: white;
+}
 
 @media only screen and (max-width:992px){
     .navigation{

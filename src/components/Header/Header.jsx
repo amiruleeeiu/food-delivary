@@ -3,8 +3,9 @@ import { getAuth, signOut } from 'firebase/auth';
 import React, { useEffect, useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useSelector ,useDispatch} from 'react-redux';
-import { Link, NavLink } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { cartUIActions } from '../../app/shopping-cart/cart-ui-slice';
+import { useUserAuth } from '../../Context/UserAuthContext';
 import firebaseConfig from '../../firebaseConfig';
 import './Header.css'
 
@@ -33,16 +34,11 @@ const Header = () => {
     const[headerStyle,setHeaderStyle]=useState(false);
     const menuRef=useRef(null);
     const cartQuantity=useSelector(state=>state.cart.totalQuantity);
-    const user=useSelector(state=>state.auth.user);
     const dispatch=useDispatch()
-    const email=localStorage.getItem('email');
-    const name=localStorage.getItem('name');
-    const photoURL=localStorage.getItem('photoURL');
-    console.log(email,photoURL);
+    const navigate=useNavigate()
 
+    const {user,logOut}=useUserAuth();
     //auth
-    const app = initializeApp(firebaseConfig);
-    const auth=getAuth(app)
 
     const toggleMenu=()=>menuRef.current.classList.toggle('show_menu');
 
@@ -54,15 +50,17 @@ const Header = () => {
         }
     }
 
-    const handleLogout=()=>{
-        signOut(auth).then(() => {
-            // Sign-out successful.
-          }).catch((error) => {
-            // An error happened.
-          });
-       }
-
+   
     window.addEventListener('scroll',changeStyle);
+
+    const handleLogOut=async()=>{
+        try{
+            await logOut();
+            navigate('/');
+        }catch(err){
+            console.log(err.message);
+        }
+    }
 
 
     return (
@@ -92,22 +90,15 @@ const Header = () => {
                             <span className='cart_badge'>{cartQuantity}</span>
                         </span>
                         <span className='user_icon'>
-                            <NavLink to='/login'>
+                            {/* <NavLink >
                             <i class="ri-user-line"></i>
-                            </NavLink>
+                            </NavLink> */}
+                            {
+                                user ? <button className="log_out_btn" onClick={handleLogOut}>Log out</button>
+                                : <Link to='/login'><button className="log_out_btn">Log in</button></Link>
+                            }
                         </span>
-                        {
-                            email ? 
-                            <div className='user gap-1 d-flex '>
-                                {/* <img src={photoURL} alt="" className='mr-5'/> */}
-                                <span>{name}</span>
-                                {/* <span onClick={handleLogout}>Logout</span> */}
-                            </div>
-                            : 
-                            <div>
-
-                            </div>
-                        }
+                        
                         <span className='mobile_menu' onClick={toggleMenu}>
                             <i class="ri-menu-line"></i>
                         </span>

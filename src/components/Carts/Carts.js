@@ -7,6 +7,7 @@ import './Carts.css'
 import { cartActions } from '../../app/shopping-cart/cart-slice';
 import { cartUIActions } from '../../app/shopping-cart/cart-ui-slice';
 import StyleLine from '../StyleLine/StyleLine';
+import { Link } from 'react-router-dom';
 
 const Carts = () => {
 
@@ -45,7 +46,7 @@ const Carts = () => {
                             <h4>Subtotal: </h4>
                             <h4> ${totalAmount}</h4>
                         </div>
-                        <button>CheckOut</button>
+                        <Link to='/checkout'><button>CheckOut</button></Link>
                     </div>
                 </div>
                 

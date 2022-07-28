@@ -4,17 +4,19 @@ import Header from './components/Header/Header';
 import Routers from './routes/Routers';
 import { BrowserRouter } from "react-router-dom";
 import Carts from './components/Carts/Carts';
+import { UserAuthContextProvider } from './Context/UserAuthContext';
 
 function App() {
   
   return (
-    <BrowserRouter>
-      <Header/>
-      <Carts/>
-      <Routers/>
-      <Footer/>
-    </BrowserRouter>
-    
+    <UserAuthContextProvider>
+      <BrowserRouter>
+        <Header/>
+        <Carts/>
+        <Routers/>
+        <Footer/>
+      </BrowserRouter>
+    </UserAuthContextProvider>
   );
 }
 
