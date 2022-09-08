@@ -73,7 +73,6 @@ const AllFoods = () => {
         setPageNumber(selected);
     }
 
-
     return (
         <Helmet title='All-Foods'>
             <CommonSection title='All Foods'/>

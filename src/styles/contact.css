@@ -1,0 +1,37 @@
+.contact_form{
+    border: 1px solid rgb(216, 213, 213);
+    margin-bottom: 5px;
+}
+.contact_form input{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    width: 100%;
+    
+}
+.contact_button button{
+    border: none;
+    background: #000d6b;
+    width: 100%;
+    margin-top: 2px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.social_media span i{
+    background: #000d6b;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+   
+}
+.contact h5{
+    color: #000d6b;
+    font-weight: 600;
+}
+.contact textarea{
+    border: none;
+    outline: none;
+    border: 1px solid rgb(223, 221, 221);
+    padding: 10px;
+}

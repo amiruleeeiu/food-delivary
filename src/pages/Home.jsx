@@ -17,7 +17,6 @@ import whyimg from '../assets/images/location.png';
 import Testimonial from '../components/Testimonial/Testimonial';
 import StyleLine from '../components/StyleLine/StyleLine';
 import Helmet from '../components/Helmet/Helmet';
-import ReactPaginate from 'react-paginate';
 
 const featureData = [
     {
@@ -43,8 +42,6 @@ const Home = () => {
     const[allProducts,setAllProducts]=useState(products);
     const[hotPizza,setHotPizza]=useState([]);
     const[category,setCategory]=useState('All');
-    // const[pageNumber,setPageNumber]=useState(0);
-    // const[pageCount,setPageCount]=useState(0)
 
     
     useEffect(()=>{
@@ -58,20 +55,9 @@ const Home = () => {
         if(category!=='All'){
             items=items.filter(item=>item.category===category);
         }
-        // const productPerPage=8;
-        // const visitedPage=pageNumber*productPerPage;
-        // const displayPage=items.slice(visitedPage,visitedPage+productPerPage);
-        // setAllProducts(displayPage);
-        // const pageCount=Math.ceil(items.length/productPerPage);
-        // setPageCount(pageCount);
         setAllProducts(items);
 
     },[category]);
-
-    // const pageChange=({selected})=>{
-    //     setPageNumber(selected);
-    // }
-
 
     return (
         <Helmet title='Home'>
@@ -187,15 +173,7 @@ const Home = () => {
                             <Link className='text-end mt-3' to='/food'>See More <i class="ri-arrow-right-line"></i></Link>
                         </div>
                     </Row>
-                    {/* <Row className='mt-5'>
-                        <ReactPaginate
-                            onPageChange={pageChange}
-                            pageCount={pageCount}
-                            previousLabel='Prev'
-                            nextLabel='Next'
-                            containerClassName='paginationBtns'
-                        />
-                    </Row> */}
+            
                 </section>
                 <section className='mt-5'>
                     <Row>

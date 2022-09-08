@@ -27,7 +27,6 @@ const FoodDetails = () => {
         setReview(newReview);
     }
 
-
     const handleReview=(e)=>{
         e.preventDefault()
         setReviewList([...reviewList,review]);
@@ -38,8 +37,6 @@ const FoodDetails = () => {
         })
     }
 
-    console.log(reviewList);
-    
     const dispatch=useDispatch();
     const cartItems=useSelector(state=>state.cart.productList);
 
